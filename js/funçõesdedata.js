@@ -7,7 +7,7 @@ function apagar_msg(stringvar)
 
 function mostrar_mes()
 {
-    data = document.getElementById("data-mes").value;
+    let data = document.getElementById("data-mes").value;
 
     if (data[5] == "0" && data[6] == "1")
         document.getElementById("mes").innerHTML = "Janeiro";
@@ -37,8 +37,30 @@ function mostrar_mes()
 
 function calcular_ponto()
 {
-    entrada = document.getElementById("hora_entrada").value;
-    //saida = document.getElementById("hora_saida").value;
+    let temp = document.getElementById("hora-entrada").value;
 
-    document.getElementById("ponto").innerHTML = entrada;
+    let hora_entrada = temp[0] +  temp[1];
+    let minuto_entrada = temp[3] + temp[4];
+
+    temp = document.getElementById("hora-saida").value;
+
+    let hora_saida = temp[0] +  temp[1];
+    let minuto_saida = temp[3] + temp[4];
+
+    if (hora_entrada > hora_saida)
+        document.getElementById("ponto").innerHTML = "Erro! A data de saída é inferior à data de entrada."
+    else if (hora_entrada == hora_saida)
+    {
+        if (minuto_entrada > minuto_saida)
+            document.getElementById("ponto").innerHTML = "Erro! A data de saída é inferior à data de entrada."
+    }
+}
+
+function calcular_semana()
+{
+    let dia = document.getElementById("data-semana").value;
+
+    document.getElementById("dia-semana").innerHTML = dia.getDay();
+    //if (dia.getDay() == 0)
+    //    document.getElementById("dia-semana").innerHTML = "Segunda-Feira";
 }
