@@ -1,0 +1,143 @@
+body{
+    width: 70%;
+    margin:  0 auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    background-image: url("imagens/bg.png");
+   
+}
+
+.logo{
+    width: 15%;
+    float: left;
+    margin: 10px 0px;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 25px;
+}
+
+.slogan{ 
+        width: 70%;
+        float: left;
+        margin: 10px 0px;
+        font-family: "Kanit", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: xx-large;
+        text-align: center;
+        height: 150px;
+        line-height: 75px;
+        font-size: xx-large;
+        color: rgb(0, 0, 0);
+        
+}
+
+nav{
+    height: 85px;
+    line-height: 40px;
+    background-color: gray;
+    border-radius: 5px;
+    clear: both;/
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0px 0px 5px 0px
+}
+
+nav a:link, a:visited{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding:  0px 25px;
+	font-family: "Kanit", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+nav a:hover{
+    background-color: rgba(126, 210, 30, 0.555);
+    border-radius: 5px;
+}
+
+.linkativo{
+    background-color: rgba(126, 210, 30, 0.26);
+}
+
+section{
+    width: 100%;
+    border-radius: 5px;
+    float: left;
+}
+
+article{
+    background-color: white;
+    margin: 10px 0px;
+    border-radius: 5px;
+    padding: 1% 5%; 
+}
+
+.titulo{
+    font-family: "Kanit", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+    color: rgb(0, 0, 0);
+    font-size:x-large;
+}
+
+footer{
+    width: 100%;
+    float: left;
+    background-color: grey;
+    border-radius: 5px;
+    margin-bottom: 10px;
+	height: 40px;
+    line-height: 40px;
+}
+
+footer p{
+    color: white;
+    padding: 0% 3%;
+}
+
+.section-title span {
+    padding: 0 30px; 
+    white-space: nowrap; 
+}
+
+@media only screen and (max-width: 600px){
+
+    body{
+        font-size: 12px;/*tamanho letra*/
+        width: 90%;/*repara que utilizamos na largura % para ir ajustando à resolução da página*/
+    }
+
+    .logo{
+        width: 100%;/*largura logo*/
+    }
+    .slogan{
+        display: none;/*Nesta resolução o slogan não aparece*/
+
+    }
+
+    section{
+        width: 100%;/*Largura da section*/
+    }
+
+    aside{
+        width: 100%;/*Largura*/
+        float: left;/*Alinhamento*/
+        margin: 0% 0% 3% 0%;/* cria um margem/espaço em volta neste caso 0 em cima 0 direita 3 baixo e 0 esquerda */
+    }
+
+    nav{
+
+        font-size: 15px;/*tamanho letra*/
+    }
+
+
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-pt"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site muito fixe">
+    <meta name="keyword" content="HTML, CSS">
+    <meta name="author" content="Luis">
+    <meta name="generator" content="Visual Studio Code">
+    <meta http-equiv="refreh" content="300">
+    <meta name="robots" content="noindex">
+    <title>Avaliação Javascript</title>
+    <link rel="icon" href="imagens/jsicon.png" type="image/x-icon"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="js/strings.js"></script>       
+</head>
+<body>
+    <header>
+        <img src="imagens/jsicon.png" alt="Logotipo Javascript" class="logo">
+        <p class="slogan">Avaliação Javascript<br/>Strings</p>
+        <nav>
+            <ul>
+                <li><a href="Input_Output.html" class="linkativo">Input/Output</a></li>
+                <li><a href="Instruções_de_Decisão.html" class="linkativo">Instruções de Decisão</a></li>
+                <li><a href="Funções.html" class="linkativo">Funções</a></li>
+                <li><a href="Validações.html" class="linkativo">Validações</a></li>
+                <li><a href="Drawing.html" class="linkativo">Desenhos</a></li>
+                <li><a href="Strings.html" class="linkativo">Strings</a></li>
+                <li><a href="Funções de Data.html" class="linkativo">Funções de Data</a></li>
+                <li><a href="#" class="linkativo">Arrays</a></li>
+                <li><a href="#" class="linkativo">Algoritmos</a></li>
+                <li><a href="#" class="linkativo">Jogo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <header>
+                <h2 class="titulo">34. </h2>
+            </header>
+            <p>
+                Crie um programa que leia um endereço de email e mostre metade escondido<br/>
+                Exemplo: mailncarvalho@gmail.com resultado mailnc…….@gmail.com.<br/>
+                <label for="mail">Introduza um endereço de email:</label>
+                <input type="text" id="mail" name="mail"><br/>
+                <button type="button" onclick="converter_mail()">Mostrar</button>
+                <button type="button" onclick="apagar_msg('e-mail')">Apagar Mensagem</button> 
+            </p>
+            <p id="e-mail"></p>
+        </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">35. </h2>
+            </header>
+            <p>
+                Crie um programa que leia do utilizador o nome e imprimir:<br/>
+                • Todo o nome: <span style="color: red;" id="todo-nome"></span><br/>
+                • Primeira letra do nome: <span style="color: red;" id="primeira-letra"></span><br/>
+                • Última letra do nome: <span style="color: red;" id="ultima-letra"></span><br/>
+                • Da primeira letra até à 3ª: <span style="color: red;" id="primeira-terceira"></span><br/>
+                • Todas as letras menos a primeira: <span style="color: red;" id="menos-primeira"></span><br/>
+                • Duas últimas letras: <span style="color: red;" id="duas-ultimas"></span><br/>
+                • Todos os nomes separados por espaços (split): <span style="color: red;" id="nome-split"></span><br/>
+                <label for="insert_name">Introduza um nome:</label>
+                <input type="text" id="insert_name" name="insert_name"><br/>
+                <button type="button" onclick="manipular_nome()">Carregar nome</button>
+                <button type="button" onclick="apagar_msg34('')">Apagar Mensagem</button> 
+            </p>
+        </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">36. </h2>
+            </header>
+            <p>
+                Crie um programa que mostre o seguinte padrão utilizando ciclos encadeados. O número de linhas deverá ser introduzido pelo utilizador. <br/>
+                <span id="pad">Exemplo para 5 linhas:<br/>
+                *<br/>
+                * *<br/>
+                * * *<br/>
+                * * * *<br/>
+                * * * * *<br/></span>
+                <label for="n_linhas">Introduza o número de linhas</label>
+                <input type="number" id="n_linhas" name="n_linhas" min="0"><br/>
+                <button type="button" onclick="gerar_padrao()">Gerar Padrão</button>
+            </p>
+        </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">37. </h2>
+            </header>
+            <p>
+                Crie um programa que leia um número do utilizador e mostre a soma dos números de 1 até ao valor introduzido pelo utilizador.<br/>
+                <label for="num">Introduza um número</label>
+                <input type="number" id="num" name="num" min="0"><br/>
+                <button type="button" onclick="somar_string()">Calcular Soma</button>
+                <button type="button" onclick="apagar_msg('soma_n')">Apagar Mensagem</button> 
+            </p>
+            <p id="soma_n"></p>
+        </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">38. </h2>
+            </header>
+            <p>
+                Crie um programa que imprima todos os múltiplos de 3, entre 1 e 100.<br/>
+                <button type="button" onclick="gerar_mult()">Gerar Múltiplos de 3</button>
+                <button type="button" onclick="apagar_msg('')">Apagar Mensagem</button> 
+            </p>
+            <p id="mult-tres"></p>
+        </article>
+    </section>
+   
+    <footer>
+        <p>&copy; Luis Viana</p>
+    </footer>
+</body>
+</html>

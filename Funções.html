@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-pt"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site muito fixe">
+    <meta name="keyword" content="HTML, CSS">
+    <meta name="author" content="Luis">
+    <meta name="generator" content="Visual Studio Code">
+    <meta http-equiv="refreh" content="300">
+    <meta name="robots" content="noindex">
+    <title>Avaliação Javascript</title>
+    <link rel="icon" href="imagens/jsicon.png" type="image/x-icon"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="js/funções.js"></script>       
+</head>
+<body>
+    <header>
+        <img src="imagens/jsicon.png" alt="Logotipo Javascript" class="logo">
+        <p class="slogan">Avaliação Javascript<br/>Funções</p>
+        <nav>
+            <ul>
+                <li><a href="Input_Output.html" class="linkativo">Input/Output</a></li>
+                <li><a href="Instruções_de_Decisão.html" class="linkativo">Instruções de Decisão</a></li>
+                <li><a href="Funções.html" class="linkativo">Funções</a></li>
+                <li><a href="Validações.html" class="linkativo">Validações</a></li>
+                <li><a href="Drawing.html" class="linkativo">Desenhos</a></li>
+                <li><a href="Strings.html" class="linkativo">Strings</a></li>
+                <li><a href="Funções de Data.html" class="linkativo">Funções de Data</a></li>
+                <li><a href="#" class="linkativo">Arrays</a></li>
+                <li><a href="#" class="linkativo">Algoritmos</a></li>
+                <li><a href="#" class="linkativo">Jogo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <header>
+                <h2 class="titulo">20. </h2>
+            </header>
+            <p>
+                Crie uma função receba um valor em euros e mostre o valor convertido em dólares. O valor do câmbio deverá ser dado pelo utilizador.<br/>
+                <label for="valor_euros">Valor em €:</label>
+                <input type="number" id="valor_euros" name="valor_euros" min="0"><br/>
+                <label for="valor_cambio">Valor do US$ em €</label>
+                <input type="number" id="valor_cambio" name="valor_cambio" min="0"><br/>
+                <button type="button" onclick="calcular_conversao()">Calcular a Conversão</button>
+                <button type="button" onclick="apagar_msg('text_cambio')">Apagar Mensagem</button> 
+            </p>
+            <p id="text_cambio"></p>
+        </article>
+        
+        <article>
+            <header>
+                <h2 class="titulo">21. </h2>
+            </header>
+            <p>
+                Crie uma função que receba um número e converta-o num número negativo.<br/>
+                <label for="convert_num_neg">Insira um número:</label>
+                <input type="number" id="convert_num_neg" name="convert_num_neg"><br/>
+                <button type="button" onclick="converter_negativo()">Converter Número</button>
+                <button type="button" onclick="apagar_msg('text_convert_num')">Apagar Mensagem</button> 
+            </p>
+            <p id="text_convert_num"></p>
+        </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">22. </h2>
+            </header>
+            <p>
+                Crie uma função receba um valor (com imposto) e a percentagem de imposto e devolva o valor sem o imposto assim como o valor do imposto.</br>
+                <label for="valor_total">Indique um valor(com imposto):</label>
+                <input type="number" id="valor_total" name="valor_total"></br>
+                <label for="percentagem">Indique a percentagem do imposto:</label>
+                <input type="number" id="percentagem" name="percentagem"></br>
+                <button type="button" onclick="calcular_imposto()">Calcular</button>
+                <button type="button" onclick="apagar_msg('text_imposto')">Apagar Mensagem</button>
+            </p>
+            <p id="text_imposto">
+        </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">23. </h2>
+            </header>
+            <p>
+                Crie uma função que receba um valor e a percentagem de imposto e devolva o valor com o imposto.</br>
+                <label for="v_total">Indique um valor:</label>
+                <input type="number" id="v_total" name="v_total"></br>
+                <label for="percent">Indique a percentagem do imposto:</label>
+                <input type="number" id="percent" name="percent"></br>
+                <button type="button" onclick="calcular_total()">Calcular</button>
+                <button type="button" onclick="apagar_msg('text_total')">Apagar Mensagem</button>
+            </p>
+            <p id="text_total">
+        </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">24. </h2>
+            </header>
+            <p>
+                Crie uma função que gere uma password com letras aleatórias. A quantidade de caracteres deverá ser definida pelo utilizador.</br>
+                A password tem que ter no mínimo 8 carácteres.</br>
+                <label for="total_chars">Indique a quantidade de caracteres para a password:</label>
+                <input type="number" id="total_chars" name="total_chars"></br>
+                <button type="button" onclick="gerar_password()">Gerar Password</button>
+                <button type="button" onclick="apagar_msg('password')">Apagar Mensagem</button>
+            </p>
+            <p id="password">
+        </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">25. </h2>
+            </header>
+            <p>
+                Crie uma função que devolva o maior número de um array com 100 números aleatórios.</br>
+                <button type="button" onclick="maior_num_100()">Encontrar o Maior Número</button>
+                <button type="button" onclick="apagar_msg('array_100_random'), apagar_msg('maior_num')">Apagar Mensagem</button>
+            </p>
+            <p id="array_100_random"></p>
+            <p id="maior_num"></p>
+        </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">26. </h2>
+            </header>
+            <p>
+                Crie uma função que devolva o menor número de um array com 100 números aleatórios.</br>
+                <button type="button" onclick="menor_num_100()">Encontrar o Menor Número</button>
+                <button type="button" onclick="apagar_msg('random_100_array'), apagar_msg('menor_num')">Apagar Mensagem</button>
+            </p>
+            <p id="random_100_array"></p>
+            <p id="menor_num"></p>
+        </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">27. </h2>
+            </header>
+            <p>
+                Crie uma função que receba a distância total (em km) percorrida por um automóvel e a quantidade de combustível (em litros) consumida para percorrêla, e devolva o consumo médio de combustível.</br>
+                <label for="kms">Indique a quantidade de Kms percorridos:</label>
+                <input type="number" id="kms" name="kms"></br>
+                <label for="l">Indique a quantidade de combustível (em litros) que foram consumidos</label>
+                <input type="number" id="l" name="l"></br>
+                <button type="button" onclick="calcular_consumo()">Calcular Consumo</button>
+                <button type="button" onclick="apagar_msg('consumo')">Apagar Mensagem</button>
+            </p>
+            <p id="consumo"></p>
+        </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">28. </h2>
+            </header>
+            <p>
+                Crie uma função que receba dois valores inteiros e apresente a diferença do maior pelo menor.</br>
+                <label for="n1">Indique o primeiro número:</label>
+                <input type="number" id="n1" name="n1"></br>
+                <label for="n2">Indique o segundo número:</label>
+                <input type="number" id="n2" name="n2"></br>
+                <button type="button" onclick="calcular_diferenca()">Diferença</button>
+                <button type="button" onclick="apagar_msg('dif_n1_n2')">Apagar Mensagem</button>
+            </p>
+            <p id="dif_n1_n2"></p>
+        </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">29. </h2>
+            </header>
+            <p>
+                Crie um programa que simule o lançamento de um dado 35000 vezes e exiba a quantidade de vezes que saiu cada número.</br>
+                <button type="button" onclick="lancar_dado()">Lançar Dados</button>
+                <button type="button" onclick="apagar_msg('dados_lancados')">Apagar Mensagem</button>
+            </p>
+            <p id="dados_lancados"></p>
+        </article>
+    </section>
+   
+    <footer>
+        <p>&copy; Luis Viana</p>
+    </footer>
+</body>
+</html>
