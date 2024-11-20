@@ -84,6 +84,58 @@
             </p>
             <p id="dia-semana"></p>
         </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">42. </h2>
+            </header>
+            <p>
+                Crie um programa que leia a data de nascimento e mostre a respetiva idade.<br/>
+                <label for="data-nasc"> Insira a data de nascimento: </label>
+                <input type="date" id="data-nasc" name="data-nasc"><br/>
+                <button type="button" onclick="calcular_idade()">Calcular Idade</button>
+                <button type="button" onclick="apagar_msg('idade')">Apagar Mensagem</button> 
+            </p>
+            <p id="idade"></p>
+        </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">43. </h2>
+            </header>
+            <p>
+                Crie um programa que simule o concurso do “Preço Certo em Euros”. O programa recebe três valores dados pelos concorrentes e o valor do artigo e mostra o valor mais aproximado que não ultrapassou o valor do artigo.<br/>
+                <label for="valor1"> Insira o primeiro valor: </label>
+                <input type="number" id="valor1" name="valor1" min="1"><br/>
+                <label for="valor2"> Insira o segundo valor: </label>
+                <input type="number" id="valor2" name="valor2" min="1"><br/>
+                <label for="valor3"> Insira o terceiro valor: </label>
+                <input type="number" id="valor3" name="valor3" min="1"><br/>
+                <label for="valor"> Insira o valor do artigo: </label>
+                <input type="number" id="valor" name="valor" min="1"><br/>
+                <button type="button" onclick="resultado_valores()">Resultado</button>
+                <button type="button" onclick="apagar_msg('resultado-valores')">Apagar Mensagem</button> 
+            </p>
+            <p id="resultado-valores"></p>
+        </article>
+
+        <article>
+            <header>
+                <h2 class="titulo">44. </h2>
+            </header>
+            <p>
+                Crie um programa que simule as eleições para o cargo de Presidente da Junta sabendo que concorrem 3 candidatos com os respetivos votos atribuídos pelo utilizador. Mostre qual o candidato com mais votos e se houve empates.<br/>
+                <label for="candidato1"> Insira os votos do primeiro candidato: </label>
+                <input type="number" id="candidato1" name="candidato1" min="0"><br/>
+                <label for="candidato2"> Insira os votos do segundo candidato: </label>
+                <input type="number" id="candidato2" name="candidato2" min="0"><br/>
+                <label for="candidato3"> Insira os votos do terceiro candidato: </label>
+                <input type="number" id="candidato3" name="candidato3" min="0"><br/>
+                <button type="button" onclick="eleicoes()">Resultado</button>
+                <button type="button" onclick="apagar_msg('resultado-eleicoes')">Apagar Mensagem</button> 
+            </p>
+            <p id="resultado-eleicoes"></p>
+        </article>
     </section>
    
     <footer>

@@ -1,13 +1,13 @@
 function apagar_msg(stringvar)
 {
-    let text = "Tem certeza que deseja apagar?";
+    const text = "Tem certeza que deseja apagar?";
     if (confirm(text) == true)
         document.getElementById(stringvar).innerHTML = null;
 }
 
 function validar_string()
 {
-    let string = document.getElementById("string").value;
+    const string = document.getElementById("string").value;
 
     if (isNaN(string) == true)
         document.getElementById("is_num").innerHTML = "Erro! A string inserida não é um número";
@@ -17,8 +17,8 @@ function validar_string()
 
 function confirmar_password()
 {
-    let pass = document.getElementById("pass").value;
-    let conf_pass = document.getElementById("conf_pass").value;
+    const pass = document.getElementById("pass").value;
+    const conf_pass = document.getElementById("conf_pass").value;
 
     if (pass != conf_pass)
         document.getElementById("pass_msg").innerHTML = "Erro! As passwords não coincidem";

@@ -1,13 +1,13 @@
 function apagar_msg(stringvar)
 {
-    let text = "Tem certeza que deseja apagar?";
+    const text = "Tem certeza que deseja apagar?";
     if (confirm(text) == true)
         document.getElementById(stringvar).innerHTML = null;
 }
 
 function apagar_msg34()
 {
-    let text = "Tem certeza que deseja apagar?";
+    const text = "Tem certeza que deseja apagar?";
     if (confirm(text) == true)
     {
         document.getElementById("todo-nome").innerHTML = null;
@@ -22,9 +22,9 @@ function apagar_msg34()
 
 function converter_mail()
 {
-    let str = document.getElementById("mail").value;
+    const str = document.getElementById("mail").value;
     let modStr = "";
-    let n = (str.length/2)/2
+    const n = (str.length/2)/2
 
     for (i = 0; i < str.length; i++)
     {
@@ -39,11 +39,11 @@ function converter_mail()
 
 function manipular_nome()
 {
-    let nome = document.getElementById("insert_name").value;
+    const nome = document.getElementById("insert_name").value;
     let pat = "";
     let tlu = "";
     let dul = "";
-    let nomeSplit = nome.split(" ");
+    const nomeSplit = nome.split(" ");
     let nomeSplitPrint = "";
 
     for (i = 0; i < nome.length; i++)
@@ -77,7 +77,7 @@ function manipular_nome()
 
 function gerar_padrao()
 {
-    let max = document.getElementById("n_linhas").value;
+    const max = document.getElementById("n_linhas").value;
     let padrao = "";
 
     for (i = 1; i <= max; i++)
@@ -92,7 +92,7 @@ function gerar_padrao()
 
 function somar_string()
 {
-    let n = document.getElementById("num").value;
+    const n = document.getElementById("num").value;
     let soma = 1;
 
     for (i = 2; i <= n; i++)
@@ -103,8 +103,6 @@ function somar_string()
 
 function gerar_mult()
 {
-    let n = "";
-
     for (i = 1; i < 101; i++)
         if (i % 3 == 0)
             document.getElementById("mult-tres").innerHTML += i + " ";

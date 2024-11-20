@@ -1,6 +1,6 @@
 function apagar_msg(stringvar)
 {
-    let text = "Tem certeza que deseja apagar?";
+    const text = "Tem certeza que deseja apagar?";
     if (confirm(text) == true)
         document.getElementById(stringvar).innerHTML = null;
 }
@@ -45,7 +45,7 @@ let random = 0;
 let tentativas = 0;
 function validar_palpite()
 {
-    let palpite = parseInt(document.getElementById("palpite").value);
+    const palpite = parseInt(document.getElementById("palpite").value);
 
     if (random != 0)
     {
@@ -155,7 +155,7 @@ function perto_100()
 
 function calcular_nota_qualitativa()
 {
-    let nota = document.getElementById("nota").value;
+    const nota = document.getElementById("nota").value;
 
     if (nota >= 0 && nota < 5)
         document.getElementById("nota_qualitativa").innerHTML = "Muito insuficiente";
@@ -191,7 +191,7 @@ function validar_frase()
 
 function count_string_num()
 {
-    let frase = document.getElementById("nfrase").value;
+    const frase = document.getElementById("nfrase").value;
     let count_n = 0;
     let i = 0;
 
@@ -210,7 +210,7 @@ function count_string_num()
 
 function inverter_frase()
 {
-    let frase = document.getElementById("original_text").value;
+    const frase = document.getElementById("original_text").value;
     let frase_invertida = "";
     let i = 0;
 

@@ -5,7 +5,7 @@ function alerta()
 
 function confirmar()
 {
-    let text = "Deseja continuar a realizar os exercícios?";
+    const text = "Deseja continuar a realizar os exercícios?";
     if (confirm(text) == true)
         alert("Bem escolhido!");
     else
@@ -14,7 +14,7 @@ function confirmar()
 
 function nome()
 {
-    let nome = prompt("Escreva o seu nome:");
+    const nome = prompt("Escreva o seu nome:");
     if (nome != null && nome != "")
         document.getElementById("nome").innerHTML = "O Formando " + nome + " está aprovado"
     else
@@ -23,15 +23,15 @@ function nome()
 
 function apagar_msg(stringvar)
 {
-    let text = "Tem certeza que deseja apagar?";
+    const text = "Tem certeza que deseja apagar?";
     if (confirm(text) == true)
         document.getElementById(stringvar).innerHTML = null;
 }
 
 function nome_idade()
 {
-    let nome = prompt("Escreva o seu nome:");
-    let idade = prompt("Escreva a sua idade:")
+    const nome = prompt("Escreva o seu nome:");
+    const idade = prompt("Escreva a sua idade:")
     if (nome != null && nome != "" && idade != null && idade != "")
     {
         document.getElementById("nome_idade").innerHTML = "O Formando " + nome + " tem " + idade + " anos";
@@ -42,8 +42,8 @@ function nome_idade()
 
 function console_log()
 {
-    let nome = prompt("Escreva o seu nome:");
-    let clube = prompt("Escreva o seu clube de futebol:")
+    const nome = prompt("Escreva o seu nome:");
+    const clube = prompt("Escreva o seu clube de futebol:")
     if (nome != null && nome != "" && clube != null && clube != "")
         console.log("Eu sou o(a) " + nome + " e sou adepto(a) do " + clube);
     else
@@ -52,12 +52,12 @@ function console_log()
 
 function inserir_dados()
 {
-    let nome = prompt("Escreva o seu nome:");
-    let estado_civil = prompt("Indique o seu estado civil:\nCasado; Solteiro; Divorciado; Viúvo");
-    let idade = prompt("Escreva a sua idade");
-    let altura = prompt("Escreva a sua altura");
-    let socio = prompt("É sócio?\nSim/Não");
-    let email = prompt("Escreva o seu endereço de e-mail:");
+    const nome = prompt("Escreva o seu nome:");
+    const estado_civil = prompt("Indique o seu estado civil:\nCasado; Solteiro; Divorciado; Viúvo");
+    const idade = prompt("Escreva a sua idade");
+    const altura = prompt("Escreva a sua altura");
+    const socio = prompt("É sócio?\nSim/Não");
+    const email = prompt("Escreva o seu endereço de e-mail:");
     if (nome != null && nome != "" && estado_civil != null && estado_civil != "" & idade != null && idade != "" & altura != null && altura != "" & socio != null && socio != "" & email != null && email != "")
     {
         document.getElementById("dados").innerHTML = "Nome: " + nome + "<br/>Estado Civil: " + estado_civil + "<br/>Idade: " + idade + "<br/>Altura: " + altura + "<br/>Sócio: " + socio + "<br/>Email: " + email;
@@ -70,13 +70,14 @@ function data()
 {
     const data_atual = new Date();
     const data_formatada = data_atual.toLocaleDateString();
+
     document.getElementById("data").innerHTML = data_formatada;
 }
 
 function cumprimentar()
 {
-    let data = new Date();
-    let hora_atual = data.getHours();
+    const data = new Date();
+    const hora_atual = data.getHours();
 
     if (hora_atual >= 3 && hora_atual < 12)
         document.getElementById("hora").innerHTML = "Bom dia!";

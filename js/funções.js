@@ -1,7 +1,14 @@
+function apagar_msg(stringvar)
+{
+    const text = "Tem certeza que deseja apagar?";
+    if (confirm(text) == true)
+        document.getElementById(stringvar).innerHTML = null;
+}
+
 function calcular_conversao()
 {
-    let euro = document.getElementById("valor_euros").value;
-    let cambio = document.getElementById("valor_cambio").value
+    const euro = document.getElementById("valor_euros").value;
+    const cambio = document.getElementById("valor_cambio").value
 
     if (euro == "" || cambio == "")
         document.getElementById("text_cambio").innerHTML = "Erro! Por favor introduza um valor para os € e outro valor para a taxa de câmbio";
@@ -13,7 +20,7 @@ function calcular_conversao()
 
 function converter_negativo()
 {
-    let num = document.getElementById("convert_num_neg").value;
+    const num = document.getElementById("convert_num_neg").value;
 
     if (num == "")
         document.getElementById("text_convert_num").innerHTML = "Por favor insira um número para a conversão";
@@ -27,7 +34,7 @@ function converter_negativo()
 
 function calcular_imposto()
 {
-    let valor = document.getElementById("valor_total").value;
+    const valor = document.getElementById("valor_total").value;
     let imposto = document.getElementById("percentagem").value;
 
     if (valor == "" | imposto == "")
@@ -43,7 +50,7 @@ function calcular_imposto()
 
 function calcular_total()
 {
-    let valor = document.getElementById("v_total").value;
+    const valor = document.getElementById("v_total").value;
     let imposto = document.getElementById("percent").value;
 
     if (valor == "" | imposto == "")
@@ -59,13 +66,13 @@ function calcular_total()
 
 function gerar_password()
 {
-    let max_chars = document.getElementById("total_chars").value;
-    let possible_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const max_chars = document.getElementById("total_chars").value;
+    const possible_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     let password = "";
-    let random = "";
+    let random = 0;
 
     if (max_chars == "" | max_chars < 8)
-        document.getElementById("password").innerHTML = "Por favor insira o número de caractéres que a password deverá ter"
+        document.getElementById("password").innerHTML = "Por favor insira um número válido de caractéres que a password deverá ter"
     else
     {
         for (i = 0; i < max_chars; i++)
@@ -120,8 +127,8 @@ function menor_num_100()
 function calcular_consumo()
 {
     let consumo = 0;
-    let kms = document.getElementById("kms").value;
-    let l = document.getElementById("l").value;
+    const kms = document.getElementById("kms").value;
+    const l = document.getElementById("l").value;
 
     consumo = (l / kms) * 100;
 
@@ -130,8 +137,8 @@ function calcular_consumo()
 
 function calcular_diferenca()
 {
-    let n1 = document.getElementById("n1").value;
-    let n2 = document.getElementById("n2").value;
+    const n1 = document.getElementById("n1").value;
+    const n2 = document.getElementById("n2").value;
     
     if (n1 == "" | n2 == "")
         document.getElementById("dif_n1_n2").innerHTML = "Erro! Por favor introduza um valor para cada um dos números";
