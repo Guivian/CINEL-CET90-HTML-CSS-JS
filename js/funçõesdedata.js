@@ -161,13 +161,49 @@ function eleicoes()
         document.getElementById("resultado-eleicoes").innerHTML = "Erro! Não podem haver valores negativos";
     }
 
-    if (valid == true)
+    if (valido == true)
     {
-        if (c1 > c2 && c1 > c3)
+        if (c1 > c2 && c2 == c3)
+            vencedor = 8;
+        else if (c2 > c3 && c3 == c1)
+            vencedor = 9;
+        else if (c3 > c1 && c1 == c2)
+            vencedor = 10;
+        else if (c1 > c2 && c1 > c3)
             vencedor = 1;
         else if (c2 > c3 && c2 > c1)
             vencedor = 2;
         else if (c3 > c1 && c3 > c2)
             vencedor = 3;
+        else if (c1 == c2 && c1 > c3)
+            vencedor = 4;
+        else if (c1 == c3 && c1 > c2)
+            vencedor = 5;
+        else if (c2 == c3 && c2 > c1)
+            vencedor = 6;
+        else if (c1 == c2 && c1 == c3)
+            vencedor = 7;
+        
+
+        if (vencedor == 1)
+            document.getElementById("resultado-eleicoes").innerHTML = `O candidato 1 está na liderança com ${c1} votos.`;
+        else if (vencedor == 2)
+            document.getElementById("resultado-eleicoes").innerHTML = `O candidato 2 está na liderança com ${c2} votos.`;
+        else if (vencedor == 3)
+            document.getElementById("resultado-eleicoes").innerHTML = `O candidato 3 está na liderança com ${c3} votos.`;
+        else if (vencedor == 4)
+            document.getElementById("resultado-eleicoes").innerHTML = `Os candidatos 1 e 2 estão na liderança com ${c1} votos e ${c2} votos respectivamente.`;
+        else if (vencedor == 5)
+            document.getElementById("resultado-eleicoes").innerHTML = `Os candidatos 1 e 3 estão na liderança com ${c1} votos e ${c3} votos respectivamente.`;
+        else if (vencedor == 6)
+            document.getElementById("resultado-eleicoes").innerHTML = `Os candidatos 2 e 3 estão na liderança com ${c2} votos e ${c3} votos respectivamente.`;
+        else if (vencedor == 7)
+            document.getElementById("resultado-eleicoes").innerHTML = `Os candidatos estão todos empatados com ${c1} votos.`;
+        else if (vencedor == 8)
+            document.getElementById("resultado-eleicoes").innerHTML = `O candidato 1 está na liderança com ${c1} votos. Os candidatos 2 e 3 estão empatados com ${c2} votos.`;
+        else if (vencedor == 9)
+            document.getElementById("resultado-eleicoes").innerHTML = `O candidato 2 está na liderança com ${c2} votos. Os candidatos 2 e 3 estão empatados com ${c3} votos.`;
+        else if (vencedor == 10)
+            document.getElementById("resultado-eleicoes").innerHTML = `O candidato 3 está na liderança com ${c3} votos. Os candidatos 2 e 3 estão empatados com ${c1} votos.`;
     }
 }
