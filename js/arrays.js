@@ -26,21 +26,32 @@ function contar_nums()
 function rem_dup()
 {
     let ar100 = new Array(100).fill(0);
-    let random100 = new Array(100);
+    let random = new Array(100);
+
+    document.getElementById("arrayDup").innerHTML = "";
+    document.getElementById("semDup").innerHTML = ""
 
     for (i = 0; i < 100; i++)
     {
-        random100[i] = Math.floor(Math.random() * 100) + 1;
-        ar100[random100[i] - 1]++;
+        random[i] = Math.floor(Math.random() * 100) + 1;
+        ar100[random[i] - 1]++;
     }
 
-    for (i = 0; i < 100; i++)
+    document.getElementById("arrayDup").innerHTML = "Array: <br/>";
+    for (i = 0; i < 100; i ++)
+        document.getElementById("arrayDup").innerHTML += `${random[i]} `;
+
+    for (i = 99; i >= 0; i--)
     {
         if (ar100[random[i] - 1] > 1)
-            random100[i] = null;
+        {
+            random.splice(i, 1);
+            ar100[random[i] - 1]--;
+        }
     }
 
+    document.getElementById("semDup").innerHTML = "Array sem números duplicados: <br/>"
     for (i = 0; i < 100; i++)
-        if (random100[i] != null)
-            document.getElementById("duplicados").innerHTML += "";
+        if (random[i])
+            document.getElementById("semDup").innerHTML += `${random[i]} `;
 }
