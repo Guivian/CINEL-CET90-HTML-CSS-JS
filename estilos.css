@@ -3,8 +3,7 @@ body{
     margin:  0 auto;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 17px;
-    background-image: url("imagens/bg.png");
-   
+    background-color:#E8E8E8;
 }
 
 .logo{
@@ -107,37 +106,4 @@ footer p{
 .section-title span {
     padding: 0 30px; 
     white-space: nowrap; 
-}
-
-@media only screen and (max-width: 600px){
-
-    body{
-        font-size: 12px;/*tamanho letra*/
-        width: 90%;/*repara que utilizamos na largura % para ir ajustando à resolução da página*/
-    }
-
-    .logo{
-        width: 100%;/*largura logo*/
-    }
-    .slogan{
-        display: none;/*Nesta resolução o slogan não aparece*/
-
-    }
-
-    section{
-        width: 100%;/*Largura da section*/
-    }
-
-    aside{
-        width: 100%;/*Largura*/
-        float: left;/*Alinhamento*/
-        margin: 0% 0% 3% 0%;/* cria um margem/espaço em volta neste caso 0 em cima 0 direita 3 baixo e 0 esquerda */
-    }
-
-    nav{
-
-        font-size: 15px;/*tamanho letra*/
-    }
-
-
 }
